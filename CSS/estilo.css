@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "bg";
+}
+
+#bg {
+    grid-area: bg;
+}
+
+#bg img {
+    position: absolute;
+    width: 30%;
+    height: 100%;
+}
+
+#bg .front {
+    z-index: 1;
+    position: absolute;
+    height:35%;
+    width: 30%;
+    margin-left: 10%;
+    margin-top:7%;
+}
+
+#bg .back {
+    z-index: 1;
+    position: absolute;
+    height:35%;
+    width: 30%;
+    margin-left: 15%;
+    margin-top: 27%;
+}
