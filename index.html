@@ -8,16 +8,73 @@
     <link rel="stylesheet" href="CSS/estilo.css">
 </head>
 <body>
-<div class="container">
-    <div id="bg">
-        <div><img src="images/bg-main-desktop.png">
-        <div><img class="front" src="images/bg-card-front.png"></div>
-        <div><img class="back" src="images/bg-card-back.png"></div>
+<main>
+    <div class="container">
+        <div class="left_section">
+            <div class="cards">
+                <div class="front_card">
+                    <img class="front_card" src="images/bg-card-front.png" alt="front_card">
+                    <div class="card_container">
+                        <img class="logo" src="images/card-logo.svg" alt="logo">
+                        <h1 id="number">0000 0000 0000 0000</h1>
+                        <div class="card_info">
+                            <span id="name">Jane Aplaseed</span>
+                                <span id="date">00
+                                /
+                                <span id="year">00</span>
+                                </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="back_card">
+                <img class="back_card" src="images/bg-card-back.png" alt="back_card">
+                    <span id="cvc">000</span>
+                </div>
+            </div>
+        </div>
+        <div class="right section">
+            <form>
+                <div class="grid_1">
+                    <label for="card_name">Cardholder Name</label>
+                    <input
+                    type="text"
+                    placeholder="e.g. Jane Aplaseed"
+                    id="card_name"
+                    required
+                    />
+                </div>
+                <div class="grid_2">
+                    <label for="card_number">Card Number</label>
+                    <input
+                    type="number" 
+                    oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)"
+                    minlength="16"
+                    maxlength="16"
+                    placeholder="e.g. 1234 5678 9123 0000"
+                    id="card_number"
+                    required
+                    />
+                </div>
+                <div class="card_information">
+                    <div id="card_date">
+                        <label for="card_date">Exp. Date (MM/YY)</label>
+                        <div class="two_inp">
+                        </div>
+                        <input 
+                        type="number"
+                        placeholder="MM"
+                        oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)"
+                        maxlength="2"
+                        minlength="2"
+                        id="card_month"
+                        required
+                        >
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
-</div>
-
-    <section></section>
+</main>
 
 <script type="text/javascript" src="JS/script.js"></script>
 </body>
