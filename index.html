@@ -5,40 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cartão de Crédito</title>
-    <link rel="stylesheet" href="CSS/estilo.css">
+    <link 
+    rel="icon" 
+    type="image/png"
+    sizes="32x32"
+    href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="CSS/estilo.css"/>
 </head>
 <body>
 <main>
     <div class="container">
-        <div class="left">
+        <div class="left_section">
             <div class="cards">
                 <div class="front_card">
-                    <img class="front_card" src="images/bg-card-front.png" alt="front_card">
+                    <img 
+                        src="images/card-logo.svg" 
+                        alt="card-logo"
+                        class="card_logo"
+                    />
                     <div class="card_container">
-                        <img class="logo" src="images/card-logo.svg" alt="logo">
+                        <img src="images/bg-card-front.png" alt="front-card"/>
                         <h1 id="number">0000 0000 0000 0000</h1>
                         <div class="card_info">
-                            <span id="name">Jane Aplaseed</span>
-                                <span id="date">00
+                            <span id="name">Jane Applaseed</span>
+                            <span id="date">
+                                <span id="month">00</span>
                                 /
                                 <span id="year">00</span>
-                                </span>
+                            </span>
                         </div>
                     </div>
                 </div>
                 <div class="back_card">
-                <img class="back_card" src="images/bg-card-back.png" alt="back_card">
+                <img src="images/bg-card-back.png" alt="back_card">
                     <span id="cvc">000</span>
                 </div>
             </div>
         </div>
-        <div class="right section">
+        <div class="right_section">
             <form>
                 <div class="grid_1">
                     <label for="card_name">Cardholder Name</label>
                     <input
                     type="text"
-                    placeholder="e.g. Jane Aplaseed"
+                    placeholder="e.g. Jane Applaseed"
                     id="card_name"
                     required
                     />
@@ -71,15 +82,15 @@
                                 >
                             </div>
                             <div>
-                            <input 
-                            type="number"
-                            placeholder="YY"
-                            oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)"
-                            maxlength="2"
-                            minlength="2"
-                            id="card_year"
-                            required
-                            >
+                                <input 
+                                type="number"
+                                placeholder="YY"
+                                oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)"
+                                maxlength="2"
+                                minlength="2"
+                                id="card_year"
+                                required
+                                >
                             </div>
                         </div> 
                     </div>
